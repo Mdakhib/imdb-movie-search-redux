@@ -7,7 +7,7 @@ import { fetchMovies } from "../../redux/actions/moviesActions";
 
 const SearchInput = () => {
   const dispatch = useDispatch();
-  const searchValue = useRef("");
+  const searchValue = useRef("batman");
 
   useEffect(() => {
     searchValue.current.focus();
