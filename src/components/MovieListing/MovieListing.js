@@ -26,6 +26,13 @@ const MovieListing = () => {
         {null}
       </div>
     );
+  // if (movies.length < 1) {
+  //   return (
+  //     <div>
+  //       <h1>pls enter valid movie</h1>
+  //     </div>
+  //   );
+  // }
 
   return <div>{renderMovies}</div>;
 };

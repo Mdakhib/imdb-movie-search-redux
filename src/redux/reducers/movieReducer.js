@@ -3,6 +3,7 @@ import { ActionTypes } from "../constants/action-types";
 const initialState = {
   movies: [],
   // movie: [],
+  text: "harry",
 };
 
 export const moviesReducer = (state = initialState, { type, payload }) => {
@@ -19,6 +20,11 @@ export const moviesReducer = (state = initialState, { type, payload }) => {
       };
     // case ActionTypes.REMOVE_SELECTED_MOVIE:
     //   return {}
+    // case ActionTypes.SEARCH_MOVIES:
+    //   return {
+    //     ...state,
+    //     text: payload,
+    //   };
 
     default:
       return state;
@@ -27,11 +33,11 @@ export const moviesReducer = (state = initialState, { type, payload }) => {
 
 export const selectedMovieReducer = (state = {}, { type, payload }) => {
   switch (type) {
-    case ActionTypes.SELECTED_MOVIE:
-      return {
-        ...state,
-        ...payload,
-      };
+    // case ActionTypes.SELECTED_MOVIE:
+    //   return {
+    //     ...state,
+    //     ...payload,
+    //   };
     case ActionTypes.REMOVE_SELECTED_MOVIE:
       return {};
     default:

@@ -10,7 +10,7 @@ import {
 const MovieDetails = () => {
   const { imdbID } = useParams();
   const dispatch = useDispatch();
-  const movie = useSelector((state) => state.selectedMovie); //allMovies   selectedMovie
+  const movie = useSelector((state) => state.allMovies); //allMovies   selectedMovie
   const {
     Title,
     Actors,
@@ -63,6 +63,6 @@ const MovieDetails = () => {
   );
 
   return <div>{movieInfo}</div>;
-};
+};;
 
 export default MovieDetails;
