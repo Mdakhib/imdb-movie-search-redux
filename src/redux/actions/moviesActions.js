@@ -29,3 +29,9 @@ export const removeSelectedMovie = () => {
     type: ActionTypes.REMOVE_SELECTED_MOVIE,
   };
 };
+
+export const setLoading = () => {
+  return {
+    type: ActionTypes.LOADING,
+  };
+};

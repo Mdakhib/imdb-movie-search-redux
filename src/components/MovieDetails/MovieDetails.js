@@ -5,12 +5,15 @@ import { useParams } from "react-router-dom";
 import {
   fetchMovie,
   removeSelectedMovie,
+  setLoading,
 } from "../../redux/actions/moviesActions";
+import Loading from "../Loading/Loading";
 
 const MovieDetails = () => {
   const { imdbID } = useParams();
   const dispatch = useDispatch();
   const movie = useSelector((state) => state.allMovies); //allMovies   selectedMovie
+  const loading = useSelector((state) => state.allMovies.loading);
   const {
     Title,
     Actors,
@@ -26,6 +29,7 @@ const MovieDetails = () => {
   useEffect(() => {
     if (imdbID && imdbID !== "") {
       dispatch(fetchMovie(imdbID));
+      dispatch(setLoading());
       return () => {
         dispatch(removeSelectedMovie());
       };
@@ -62,7 +66,9 @@ const MovieDetails = () => {
     </div>
   );
 
-  return <div>{movieInfo}</div>;
+  let content = loading ? <Loading /> : movieInfo;
+
+  return <div>{content}</div>;
 };;
 
 export default MovieDetails;

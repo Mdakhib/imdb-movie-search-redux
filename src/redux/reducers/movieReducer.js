@@ -4,6 +4,7 @@ const initialState = {
   movies: [],
   // movie: [],
   text: "harry",
+  loading: false,
 };
 
 export const moviesReducer = (state = initialState, { type, payload }) => {
@@ -12,11 +13,13 @@ export const moviesReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         movies: payload,
+        loading: false,
       };
     case ActionTypes.SELECTED_MOVIE:
       return {
         ...state,
         ...payload,
+        loading: false,
       };
     // case ActionTypes.REMOVE_SELECTED_MOVIE:
     //   return {}
@@ -25,6 +28,11 @@ export const moviesReducer = (state = initialState, { type, payload }) => {
     //     ...state,
     //     text: payload,
     //   };
+    case ActionTypes.LOADING:
+      return {
+        ...state,
+        loading: true,
+      };
 
     default:
       return state;
