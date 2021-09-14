@@ -7,7 +7,7 @@ const Loading = ({ loading }) => {
   return (
     <div className="load">
       <HashLoader
-        color={"#0A043C"}
+        color={"#79b8f3"}
         loading={loading}
         size={20}
         className="load"
