@@ -22,7 +22,8 @@ const MovieListing = () => {
       })
     ) : (
       <div>
-        <h1>{movies.Error} </h1>
+        {/* <h1>{movies.Error} </h1> */}
+        {null}
       </div>
     );
 

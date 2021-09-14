@@ -7,3 +7,15 @@ export const fetchMovies = () => async (dispatch) => {
   dispatch({ type: ActionTypes.FETCH_MOVIES, payload: response.data });
   console.log("Response:", response);
 };
+
+
+export const fetchMovie = (id) => async (dispatch) => {
+  const response = await IMDBApi.get(`/?apikey=${APIKEY}&i=${id}`);
+  dispatch({ type: ActionTypes.SELECTED_MOVIE, payload: response.data });
+};
+
+export const removeSelectedMovie = () => {
+  return {
+    type: ActionTypes.REMOVE_SELECTED_MOVIE,
+  };
+};
