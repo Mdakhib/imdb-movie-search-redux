@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { fetchMovies } from "../../redux/actions/moviesActions";
 import MovieCard from "../MovieCard/MovieCard";
+import "./MovieListing.css";
 
 const MovieListing = () => {
   const dispatch = useDispatch();
@@ -34,7 +35,13 @@ const MovieListing = () => {
   //   );
   // }
 
-  return <div>{renderMovies}</div>;
+  return (
+    <div className="movie-wrapper">
+      <div className="movie-list">
+        <div className="movie-container">{renderMovies}</div>
+      </div>
+    </div>
+  );
 };
 
 export default MovieListing;

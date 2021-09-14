@@ -1,4 +1,23 @@
 form {
     text-align: center;
-    padding: 30px 0;
+    padding: 50px 0 30px 0;
+    }
+
+    .inputSearch {
+        border: none;
+        outline: none;
+        padding: 10px 8px;
+        width: 60%;
+    }
+
+    @media screen and (max-width:768px) {
+        .inputSearch {
+            width: 80%;
+        }
+    }
+
+    @media screen and (max-width:375px) {
+        .inputSearch {
+            width: 90%;
+        }
 }

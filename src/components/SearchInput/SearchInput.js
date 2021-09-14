@@ -28,7 +28,13 @@ const SearchInput = () => {
     <div>
       <div>
         <form onSubmit={handleSubmit}>
-          <input type="text" ref={searchValue} onChange={searchMovie} />
+          <input
+            placeholder="Search Movies,TV Series..."
+            type="text"
+            ref={searchValue}
+            onChange={searchMovie}
+            className="inputSearch"
+          />
         </form>
       </div>
     </div>

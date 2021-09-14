@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './MovieCard.css'
 
 const MovieCard = ({ moviesData }) => {
-  const { Title, Year, imdbID, Poster, Type } = moviesData;
+  const { Title, Year, imdbID, Poster } = moviesData;
   return (
-    <div className="cardContainer">
+    <div className="card-item">
       <Link to={`/movie/${imdbID}`}>
-        <div className="cardWrapper">
-          <div className="cardImg">
+        <div className="card-inner">
+          <div className="card-top">
             <img src={Poster} alt={Title} />
           </div>
-          <div className="cardDesc">
-            <h1>{Title} </h1>
-            <div className="cardSubDesc">
-              <p>{Year} </p>
-              <p>{Type} </p>
+          <div className="card-bottom">
+            <div className="card-info">
+              <h4>{Title}</h4>
+              <p>{Year}</p>
             </div>
           </div>
         </div>

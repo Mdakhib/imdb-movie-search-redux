@@ -1,0 +1,118 @@
+.cardDetailContainer {
+    padding: 30px;
+}
+
+.cardDetailwrapper {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+
+
+.cardDetailImgWrap {
+    display: flex;
+    justify-content: center;
+    padding-right: 30px;
+}
+
+
+.cardDetailImgWrap img {
+    height: 450px;
+    /* width: 450px; */
+    object-fit: contain;
+}
+
+.title {
+    font-size: 35px;
+    color: #ffffff;
+}
+
+.rating {
+    color: #ffffff;
+}
+
+.rating span {
+    color: #79b8f3;
+}
+
+.ratingWrap {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 750px;
+}
+
+.desc {
+    color: #ffffff;
+    margin: 0 0 30px;
+
+}
+
+.subDesc {
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+
+.subDesc span {
+    color: #79b8f3;
+    margin-left: 5px;
+}
+
+.btnWrap {
+    display: flex;
+    justify-content: center;
+}
+
+.backMovies {
+    background-color: #79b8f3;
+    color: #ffffff;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.backMovies:hover {
+    color: #79b8f3;
+    background: none;
+    border: 1px solid #79b8f3
+}
+
+
+@media screen and (max-width:1024px) {
+    .cardDetailwrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cardDetailImgWrap {
+        padding-right: 0;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    .ratingWrap {
+        margin: 10px 0;
+        margin-right: 10px;
+        flex-wrap: wrap;
+    }
+
+    .ratingWrap p {
+        margin-top: 5px;
+    }
+
+}
+
+@media screen and (max-width:425px) {
+    .cardDetailContainer {
+        padding: 15px;
+    }
+
+    .cardDetailImgWrap img {
+        height: 350px;
+        /* width: 450px; */
+        object-fit: contain;
+    }
+}
