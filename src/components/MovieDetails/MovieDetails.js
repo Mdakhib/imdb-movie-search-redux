@@ -96,6 +96,6 @@ const MovieDetails = () => {
   let content = loading ? <Loading /> : movieInfo;
 
   return <div>{content}</div>;
-};;
+};;;
 
 export default MovieDetails;

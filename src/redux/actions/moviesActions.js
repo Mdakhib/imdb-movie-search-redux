@@ -8,7 +8,7 @@ import IMDBApi from "../../apis/IMDBApi";
 //   });
 // };
 
-console.log(process.env);
+// console.log(process.env);
 
 export const fetchMovies =
   (text = "batman") =>
