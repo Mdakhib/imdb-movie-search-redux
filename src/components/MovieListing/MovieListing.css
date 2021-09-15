@@ -8,3 +8,10 @@
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     grid-gap: 15px;
 }
+@media screen and (max-width:425px) {
+
+    .movie-list,
+    .show-list {
+        margin: 20px 30px;
+    }
+}
